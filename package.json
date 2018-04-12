@@ -1,0 +1,29 @@
+{
+  "name": "git-basics",
+  "version": "1.0.0",
+  "description": "Git workshop for learning the basics",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajorquera/git-basics.git"
+  },
+  "scripts": {
+    "start": "reveal-md --watch PITCHME.md"
+  },
+  "keywords": [
+    "git",
+    "tutorial",
+    "workshop",
+    "learning",
+    "classes"
+  ],
+  "author": "Andres Jorquera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajorquera/git-basics/issues"
+  },
+  "homepage": "https://github.com/ajorquera/git-basics#readme",
+  "dependencies": {
+    "reveal-md": "^2.0.6"
+  }
+}
