@@ -156,6 +156,8 @@ Note:
 
 Note: 
 * Do a list of things you like
+* We want the work we did in the other branch
+* Check the recursive strategy
 
 ----
 
@@ -270,7 +272,7 @@ git commit
 
 ----
 
-#### Tools for resolving conflics
+#### Tools for resolving conflicts
 
 - Text editors
 - IDE
@@ -288,7 +290,7 @@ git commit
 
 - Annotated
 	```bash
-	git tag 1.0.0
+	git tag -a 1.0.1 -m 'My annotated tag 1.0.1'
 	git push --tags 
 	```
 
@@ -309,6 +311,9 @@ Maybe we could talk about NPM version and version control
 ```
 git config --local alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all"
 ```
+
+Note: 
+* Check github account for our new commits and tags and network
 
 ---
 
