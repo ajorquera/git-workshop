@@ -11,6 +11,7 @@ Checkout our presentation on this [link](https://gitpitch.com/github-basics/work
 Run the presentation in your local environment. The presentation is based on [PITCHME.md](PITCHME.md)
 
 ```bash
+npm install
 npm start
 ```
 
