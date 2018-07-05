@@ -144,6 +144,9 @@ Note:
 	git commit
 	```
 
+Note: 
+* Talk about how the files disappear
+
 4. Merge test branch
 
 	```
