@@ -36,7 +36,7 @@ Note:
 
 ----
 
-#### Distributed vesion control system
+Distributed vesion control system
  
 It looks something like this 
 
@@ -72,20 +72,20 @@ Note:
 
 ### First commits
 
-1. Create the following files: .gitignore, README.md
+1. Create the following files: README.md
 
 2. Stage files 
 
 	```bash
 	git status
-	git add .gitignore README.md
+	git add README.md
 	git status
 	```
 
-3. Commit 
+3. Commit
 
 	```bash
-	git commit
+	git commit -m 'Here goes my message'
 	git status
 	```
 
@@ -112,7 +112,7 @@ Note:
 
 	```
 	git branch
-	git branch -b feat/tests
+	git checkout -b feat/tests
 	git branch
 	```
 
@@ -141,11 +141,8 @@ Note:
 	
 	#working...
 
-	git commit
+	git commit -m 'More commits'
 	```
-
-Note: 
-* Talk about how the files disappear
 
 4. Merge test branch
 
@@ -153,9 +150,10 @@ Note:
 	git branch
 	git merge feat/test
 	```
-
 Note: 
+* Talk about how the files disappear 
 * Do a list of things you like
+
 * We want the work we did in the other branch
 * Check the recursive strategy
 
