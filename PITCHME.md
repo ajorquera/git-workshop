@@ -68,6 +68,18 @@ Note:
 * Talk about why configuring email and name is important
 * Mention where git stores its data. "." means hidding directory in unix
 
+----
+
+### States
+
+```
+echo "Hello" >> README.md
+git add README.md
+git commit -m "my commit message" 
+```
+
+![git states](assets/imgs/git-states.png)
+
 ---
 
 ### First commits
@@ -363,25 +375,7 @@ shasum README.md
 da39a3ee5e6b4b0d3255bfef95601890afd80709 README.md
 ```
 
-----
-
-### States
-
-```
-echo "Hello" >> README.md
-git add README.md
-git commit -m "my commit message" 
-```
-
-![git states](assets/imgs/git-states.png)
-
 ---
-
-### Homework
-
-Let's put your skills to the test. Your challenge as a student is to complete the following tasks that are describe in the folloging [wiki](https://github.com/ajorquera/git-basics/wiki/homework)
-
---- 
 
 ## Part 2
 
