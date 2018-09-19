@@ -1,0 +1,28 @@
+{
+	"name": "git-workshop-commit-branching",
+	"version": "1.0.0",
+	"description": "First assignment for learning the basics about commits, branching and mergin",
+	"scripts": {
+	  "test": "mocha"
+	},
+	"repository": {
+	  "type": "git",
+	  "url": "git+https://github.com/github-basics/commit-branching"
+	},
+	"keywords": [
+	  "git",
+	  "tutorial",
+	  "workshop",
+	  "learning",
+	  "classes"
+	],
+	"author": "Andres Jorquera",
+	"license": "ISC",
+	"bugs": {
+	  "url": "https://github.com/github-basics/commit-branching/issues"
+	},
+	"homepage": "https://github.com/github-basics/commit-branching#readme",
+	"dependencies": {
+	  "mocha": "^5.1.0"
+	}
+  }
