@@ -18,7 +18,7 @@ Everyone needs to have the following things before we start the class
 - Distributed version control
 
 Note:
-* Short history. Git and linus torvalds
+* Short history. Git and Linus Torvalds
 * SVN and Mercurial
 
 ----
@@ -197,29 +197,27 @@ Note:
 
 ### Remotes
 
-1. Go to this [link](https://classroom.github.com/a/5HXmOy1H) and accept the assignment
+1. Go to this [link](https://github.com/ajorquera/git-workshop) and fork it
 
 2. Add the remote from the new repo
 
 	```bash
-	git remote add origin https://github.com/github-basics/assign-cmb-${username}
+	git remote add origin git@github.com:${username}/git-workshop.git
 	git remote -v
 	```
+3. Change branch to assignments/commiting-branching
 
-3. Push
+4. Push
 	```bash
 	git push
 	git push --set-upstream origin master
 	git fetch
 	git merge origin/master
-	git merge origin/master --allow-unrelated-histories
 	git push
 	```
 
 Note: 
 * Talk about git pull ---> git fetch && git merge
-* Allow unrelated stories
-
 ----
 
 4. Merge more tests from origin/feat/more-tests
@@ -288,6 +286,8 @@ git commit
 - IDE
 - Applications
 
+Note:
+* Talk about meld
 ---
 
 ### Tagging 
@@ -327,6 +327,30 @@ Note:
 
 ---
 
+## Save our work
+
+Git was made thinking on collaboration. So, everyone, lets work in a branch to merge our work.
+
+1. I'll add you as a collaborator in a project 
+
+2. Push your work to a branch I have just created for this class
+
+3. Work with your classmates and resolve all conflicts.
+
+We should have something like:
+
+```
+# Class 21/9/2018 A.K.A The avengers
+
+## Name student A
+... 
+...
+
+## Name student B
+...
+...
+```
+
 ## Core Basics
 
 ----
@@ -344,7 +368,7 @@ Talk about the meaning of snapshots.
 
 ----
 
-#### Database - commit, tree and blob
+#### Database - commit, tree, tag and blob
 
 ![git object types](assets/imgs/object-types.png)
 
@@ -381,34 +405,65 @@ da39a3ee5e6b4b0d3255bfef95601890afd80709 README.md
 
 ---
 
-## Git reset
-* Reset --soft
-* Reset --mixed
-* Reset --hard
-* Reset path
+## Git checkout
+
+* Checkout branches
+* Checkout files 
+* Checkout commits
+* Checkout tags
 
 Note: 
-reset --hard is dangerous. Deletes data 
+* Detached HEAD
+* What would happend if I commit in detached HEAD
+* Think of an interactive way of showing HEAD changing
+
+----
+### Travel in time
+
+1. Clone project https://github.com/git/git
+2. Go back in time and checkout their first version
+3. Lets see why working in detached head is dangerous
+   * Once you checkout a tag version, make a commit, setting your name in the README.md
+   * Go to master branch
+   * <details>
+	   <summary>
+		  Don't click until you have done the previous steps
+	   </summary>
+	   Try to go back to your previous commit. Ja! Good luck
+	 </details>
+
+---
+
+## Rewriting history
+> With great power comes great responsibility. Uncle Ben
+
+Git lets you rewrite any commit on the project, just make sure to know what you are doing.
+
+* commit --amend
+* Other commands than changes history: reset, rebase, filter-branch. 
+* Issues
+
+Note: 
+* Show an interactive way to see the issues with changing history
+* Need to use push -f
+
+---
+
+## Git reset
+
+* Reset --mixed (default)
+* Reset --soft
+* Reset --hard
+* Reset file
+
+Note: 
+reset --hard is dangerous, destroys data 
 
 ----
 
 ### The three trees
 
 [tree threes](assets/img/three-trees)
-
----
-
-## Git checkout
-
-* Checkout files 
-* Checkout commits
-* Checkout tags
-* Checkout branches
-
-Note: 
-* Detached HEAD
-* What would happend if I commit in detached HEAD
-* Think of an interactive way of showing HEAD changing
 
 ---
 
@@ -422,7 +477,7 @@ Note:
 
 ## Git stash
 * Simple
-* Interactive
+* Interactive stash -p
 * Creating branch
 
 Note: 
