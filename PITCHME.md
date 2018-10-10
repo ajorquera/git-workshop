@@ -405,12 +405,44 @@ da39a3ee5e6b4b0d3255bfef95601890afd80709 README.md
 
 ---
 
+## The Tree Threes
+
+![three trees](assets/imgs/three-trees.png)
+
+----
+
+Again this....
+
+![git states](assets/imgs/git-states.png)
+
+Note: 
+* Make note about the meaning of each three
+* Mention the confusion about checkout and reset
+
+----
+
+## Git reset
+
+* Reset --soft
+* Reset --mixed (default)
+* Reset --hard
+* Reset file
+
+1. Move branch pointer (--soft or skip if file)
+2. Modify HEAD three to look like index (--mixed)
+3. Modify working directory to look like index (--hard)
+
+Note: 
+--hard is dangerous, destroys data 
+
+----
+
 ## Git checkout
 
 * Checkout branches
-* Checkout files 
 * Checkout commits
 * Checkout tags
+* Checkout files 
 
 Note: 
 * Detached HEAD
@@ -446,24 +478,6 @@ Git lets you rewrite any commit on the project, just make sure to know what you 
 Note: 
 * Show an interactive way to see the issues with changing history
 * Need to use push -f
-
----
-
-## Git reset
-
-* Reset --mixed (default)
-* Reset --soft
-* Reset --hard
-* Reset file
-
-Note: 
-reset --hard is dangerous, destroys data 
-
-----
-
-### The three trees
-
-[tree threes](assets/img/three-trees)
 
 ---
 
