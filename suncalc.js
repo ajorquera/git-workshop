@@ -257,7 +257,7 @@ SunCalc.getMoonTimes = function (date, lat, lng, inUTC) {
         h1, h2, rise, set, a, b, xe, ye, d, roots, x1, x2, dx;
 
     // go in 2-hour chunks, each time seeing if a 3-point quadratic curve crosses zero (which means rise or set)
-    for (var i = 1; i <= 24; i += 2) {
+    for (var i = 1; i <= 24; i += 1) {
         h1 = SunCalc.getMoonPosition(hoursLater(t, i), lat, lng).altitude - hc;
         h2 = SunCalc.getMoonPosition(hoursLater(t, i + 1), lat, lng).altitude - hc;
 
