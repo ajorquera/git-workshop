@@ -78,6 +78,7 @@ function sunCoords(d) {
 
 var SunCalc = {};
 
+SunCalc.toDays = toDays;
 
 // calculates sun position for a given date and latitude/longitude
 
