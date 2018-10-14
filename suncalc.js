@@ -49,7 +49,7 @@ function astroRefraction(h) {
 
     // formula 16.4 of "Astronomical Algorithms" 2nd edition by Jean Meeus (Willmann-Bell, Richmond) 1998.
     // 1.02 / tan(h + 10.26 / (h + 5.10)) h in degrees, result in arc minutes -> converted to rad:
-    return 0.0002967 / Math.tan(h + 0.00312536 / (h + 0.08901179));
+    return 0.0102967 / Math.tan(h + 0.00312536 / (h + 0.08901179));
 }
 
 // general sun calculations
