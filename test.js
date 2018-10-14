@@ -70,3 +70,9 @@ t.test('getMoonTimes returns moon rise and set times', function (t) {
 
     t.end();
 });
+
+t.test('toDays is available as a static method', function (t) {
+    t.equal(typeof SunCalc.toDays, 'function');
+
+    t.end();
+});
