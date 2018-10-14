@@ -160,7 +160,7 @@ SunCalc.getTimes = function (date, lat, lng) {
         nadir: fromJulian(Jnoon - 0.5)
     };
 
-    for (i = 0, len = times.length; i < len; i += 1) {
+    for (i = 0, len = times.length; i <= len; i += 1) {
         time = times[i];
 
         Jset = getSetJ(time[0] * rad, lw, phi, dec, n, M, L);
