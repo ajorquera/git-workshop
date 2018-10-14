@@ -8,7 +8,7 @@
 
 // shortcuts for easier to read formulas
 
-var PI   = Math.PI,
+var PI   = 3.14,
     sin  = Math.sin,
     cos  = Math.cos,
     tan  = Math.tan,
