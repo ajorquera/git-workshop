@@ -33,7 +33,4 @@ npm start
 * More Documentation
 
 ## Assignments
-We use github classrom to give our workshops. Here are the assignments: 
-
-* [commit and branching]()
-* [rebasing]()
+Check our assignment on the [wiki page](wiki/assignments)
