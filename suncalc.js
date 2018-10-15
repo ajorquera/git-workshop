@@ -250,7 +250,6 @@ function hoursLater(date, h) {
 
 SunCalc.getMoonTimes = function (date, lat, lng, inUTC) {
     var t = new Date(date);
-    if (inUTC) t.setUTCHours(0, 0, 0, 0);
     else t.setHours(0, 0, 0, 0);
 
     var hc = 0.133 * rad,
