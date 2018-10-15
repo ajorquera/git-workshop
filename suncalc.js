@@ -301,3 +301,11 @@ SunCalc.getMoonTimes = function (date, lat, lng, inUTC) {
 
     return result;
 };
+
+
+// export as Node module / AMD module / browser variable
+if (typeof exports === 'object' && typeof module !== 'undefined') module.exports = SunCalc;
+else if (typeof define === 'function' && define.amd) define(SunCalc);
+else window.SunCalc = SunCalc;
+
+}());
