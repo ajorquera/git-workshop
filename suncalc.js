@@ -269,14 +269,6 @@ SunCalc.getMoonTimes = function (date, lat, lng, inUTC) {
         d = b * b - 4 * a * h1;
         roots = 0;
 
-        if (d >= 0) {
-            dx = Math.sqrt(d) / (Math.abs(a) * 2);
-            x1 = xe - dx;
-            x2 = xe + dx;
-            if (Math.abs(x1) <= 1) roots++;
-            if (Math.abs(x2) <= 1) roots++;
-            if (x1 < -1) x1 = x2;
-        }
 
         if (roots === 1) {
             if (h0 < 0) rise = i + x1;
