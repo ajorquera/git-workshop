@@ -111,6 +111,7 @@ var times = SunCalc.times = [
 // adds a custom time to the times config
 
 SunCalc.addTime = function (angle, riseName, setName) {
+    console.log(angle);
     times.push([angle, riseName, setName]);
 };
 
@@ -234,6 +235,9 @@ SunCalc.getMoonIllumination = function (date) {
         inc = atan(sdist * sin(phi), m.dist - sdist * cos(phi)),
         angle = atan(cos(s.dec) * sin(s.ra - m.ra), sin(s.dec) * cos(m.dec) -
                 cos(s.dec) * sin(m.dec) * cos(s.ra - m.ra));
+
+    // what is this????
+    console.log(d);
 
     return {
         fraction: (1 + cos(inc)) / 2,
