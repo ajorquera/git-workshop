@@ -1,6 +1,8 @@
 
 var SunCalc = require('./suncalc'),
-    t = require('tap');
+    t = require('tap'),
+    execSync = require('child_process').execSync,
+    fs = require('fs');
 
 function near(val1, val2, margin) {
     return Math.abs(val1 - val2) < (margin || 1E-15);
@@ -67,6 +69,41 @@ t.test('getMoonTimes returns moon rise and set times', function (t) {
 
     t.equal(moonTimes.rise.toUTCString(), 'Mon, 04 Mar 2013 23:54:29 GMT');
     t.equal(moonTimes.set.toUTCString(), 'Mon, 04 Mar 2013 07:47:58 GMT');
+
+    t.end();
+});
+
+t.test('there is no console.logs', function (t) {
+    var file = fs.readFileSync('./suncalc.js', 'utf8');
+
+    t.equal(file.includes('console.log'), false);
+
+    t.end();
+});
+
+t.test('the commit message is the expected', function (t) {
+    const message = execSync('git log --format=%B -n 1 HEAD').toString().trim();
+
+    t.equal(message, 'Added my super cool test jajeejeajaja');
+
+    t.end();
+});
+
+t.skip('getTimes day detection works with a variety of date times', function (t) {
+    var latitude = 47.606209;
+    var longitude = -122.332069;
+    var targetDay = 4;
+    var dateStrings = [
+        'Mon, 04 Mar 2013 00:00:01 PDT',
+        'Mon, 04 Mar 2013 12:00:00 PDT',
+        'Mon, 04 Mar 2013 23:59:59 PDT'
+    ];
+    for (var i = 0, l = dateStrings.length; i < l; i++) {
+        var dateString = dateStrings[i];
+        var date = new Date(dateString);
+        var times = SunCalc.getTimes(date, latitude, longitude);
+        t.equal(times.solarNoon.getDate(), targetDay, dateString);
+    }
 
     t.end();
 });
