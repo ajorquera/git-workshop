@@ -186,11 +186,13 @@ function moonCoords(d) { // geocentric ecliptic coordinates of the moon
         b  = rad * 5.128 * sin(F),     // latitude
         dt = 385001 - 20905 * cos(M);  // distance to the moon in km
 
-    return {
+    const coords = {
         ra: rightAscension(l, b),
         dec: declination(l, b),
         dist: dt
     };
+    console.log('Print moon coordinates', coords);
+    return coords;
 }
 
 SunCalc.getMoonPosition = function (date, lat, lng) {
