@@ -1,5 +1,6 @@
 
 var SunCalc = require('./suncalc'),
+    execSync = require('child_process').execSync,
     t = require('tap');
 
 function near(val1, val2, margin) {
@@ -68,5 +69,12 @@ t.test('getMoonTimes returns moon rise and set times', function (t) {
     t.equal(moonTimes.rise.toUTCString(), 'Mon, 04 Mar 2013 23:54:29 GMT');
     t.equal(moonTimes.set.toUTCString(), 'Mon, 04 Mar 2013 07:47:58 GMT');
 
+    t.end();
+});
+
+t.test('the repo has tagged the firts version of the project', function (t) {
+    const commit = execSync('git rev-list -n 1 v1.0.0', {encoding: 'utf8'}).trim();
+
+    t.equal(commit, 'b9d1e531b037d14cfa8d8c41df0fa273547ee29a');
     t.end();
 });
