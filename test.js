@@ -1,5 +1,6 @@
 
 var SunCalc = require('./suncalc'),
+    fs = require('fs'),
     t = require('tap');
 
 function near(val1, val2, margin) {
@@ -68,5 +69,11 @@ t.test('getMoonTimes returns moon rise and set times', function (t) {
     t.equal(moonTimes.rise.toUTCString(), 'Mon, 04 Mar 2013 23:54:29 GMT');
     t.equal(moonTimes.set.toUTCString(), 'Mon, 04 Mar 2013 07:47:58 GMT');
 
+    t.end();
+});
+
+t.test('the lost letter is in the repo', function (t) {
+    const exist = fs.existsSync('from-hell.txt', fs.F_OK);
+    t.equal(exist, true);
     t.end();
 });
