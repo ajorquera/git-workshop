@@ -1,3 +1,4 @@
+const {execSync} = require('child_process');
 
 var SunCalc = require('./suncalc'),
     t = require('tap');
@@ -68,5 +69,38 @@ t.test('getMoonTimes returns moon rise and set times', function (t) {
     t.equal(moonTimes.rise.toUTCString(), 'Mon, 04 Mar 2013 23:54:29 GMT');
     t.equal(moonTimes.set.toUTCString(), 'Mon, 04 Mar 2013 07:47:58 GMT');
 
+    t.end();
+});
+
+t.test('getTimes day detection works with a variety of date times', {skip: true}, function (t) {
+    var latitude = 47.606209;
+    var longitude = -122.332069;
+    var targetDay = 4;
+    var dateStrings = [
+        'Mon, 04 Mar 2013 00:00:01 PDT',
+        'Mon, 04 Mar 2013 12:00:00 PDT',
+        'Mon, 04 Mar 2013 23:59:59 PDT'
+    ];
+    for (var i = 0, l = dateStrings.length; i < l; i++) {
+        var dateString = dateStrings[i];
+        var date = new Date(dateString);
+        var times = SunCalc.getTimes(date, latitude, longitude);
+        t.equal(times.solarNoon.getDate(), targetDay, dateString);
+    }
+
+    t.end();
+});
+
+t.test('that no merge commit has been made', (t) => {
+    const commit = execSync('git rev-list -1 --merges HEAD', {encoding: 'utf8'}).trim();
+
+    t.equal(commit, '0b8e1e7030f81e144f35a9a32b0f56bc2555bed9');
+    t.end();
+});
+
+t.test('that the commit 1e8523 is the previous one', (t) => {
+    const commit = execSync('git rev-list -n 1 HEAD~1', {encoding: 'utf8'}).trim();
+
+    t.equal(commit, '1e852321bcf158c3c8e9300943add0439ead1e53');
     t.end();
 });
