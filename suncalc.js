@@ -111,6 +111,7 @@ var times = SunCalc.times = [
 // adds a custom time to the times config
 
 SunCalc.addTime = function (angle, riseName, setName) {
+    console.log(angle);
     times.push([angle, riseName, setName]);
 };
 
@@ -186,11 +187,13 @@ function moonCoords(d) { // geocentric ecliptic coordinates of the moon
         b  = rad * 5.128 * sin(F),     // latitude
         dt = 385001 - 20905 * cos(M);  // distance to the moon in km
 
-    return {
+    const coords = {
         ra: rightAscension(l, b),
         dec: declination(l, b),
         dist: dt
     };
+    console.log('Print moon coordinates', coords);
+    return coords;
 }
 
 SunCalc.getMoonPosition = function (date, lat, lng) {
@@ -232,6 +235,9 @@ SunCalc.getMoonIllumination = function (date) {
         inc = atan(sdist * sin(phi), m.dist - sdist * cos(phi)),
         angle = atan(cos(s.dec) * sin(s.ra - m.ra), sin(s.dec) * cos(m.dec) -
                 cos(s.dec) * sin(m.dec) * cos(s.ra - m.ra));
+
+    // what is this????
+    console.log(d);
 
     return {
         fraction: (1 + cos(inc)) / 2,
