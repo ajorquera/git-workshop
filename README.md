@@ -1,6 +1,6 @@
 
 # Important
-This project is being used for teaching purposes. It was created by [mourner](https://github.com/mourner). Here is the original [repo](https://github.com/mourner/suncalc)
+This project is being used for teaching purposes. It was created by [mourner](https://github.com/mourner). Here is the original [repo](https://github.com/mourner/suncalc) :)
 
 SunCalc
 =======
