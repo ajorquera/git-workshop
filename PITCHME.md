@@ -432,8 +432,10 @@ Note:
 2. Modify HEAD three to look like index (--mixed)
 3. Modify working directory to look like index (--hard)
 
+*[Assignments](https://github.com/ajorquera/git-workshop/wiki/assignments%3A-reset)* 
+
 Note: 
---hard is dangerous, destroys data 
+* hard is dangerous, destroys data 
 
 ----
 
@@ -444,10 +446,13 @@ Note:
 * Checkout tags
 * Checkout files 
 
+*[Assignments](https://github.com/ajorquera/git-workshop/wiki/assignments%3A-checkout)* 
+
 Note: 
 * Detached HEAD
 * What would happend if I commit in detached HEAD
 * Think of an interactive way of showing HEAD changing
+
 
 ----
 ### Travel in time
@@ -466,66 +471,38 @@ Note:
 
 ---
 
-## Rewriting history
-> With great power comes great responsibility. Uncle Ben
-
-Git lets you rewrite any commit on the project, just make sure to know what you are doing.
-
-* commit --amend
-* Other commands than changes history: reset, rebase, filter-branch. 
-* Issues
-
-Note: 
-* Show an interactive way to see the issues with changing history
-* Need to use push -f
-
----
 
 ## Reset vs Checkout
-
-![reset vs checkout]()
 
 Note: 
 * A lot of confusion with them
 * Some cases you can use them interchangable. git checkout path = git reset --hard path
 
+---
+
 ## Git stash
 * Simple
-* Interactive stash -p
+* Interactive `stash -p`
 * Creating branch
 
 Note: 
-* Some people doesnt recommend stashing because you could forget and loose information
+* Some people doesn't recommend stashing because you could forget and loose information
 * Show examples in terminal
 * Stashing could bring conflicts
 
-## Git Rebase
-
-![git merge](assets/imgs/branching-merging.png)
-
-![git rebase](assets/imgs/branching-merging.png)
-
 ---
 
-## Coding time...
+## Rebase
+> With great power comes great responsibility. Uncle Ben
 
----
+* Rebase branch 
+* Rebase interactive
+* Changing history
 
-### 3rd assignment
+*[Assignments](https://github.com/ajorquera/git-workshop/wiki/assignments%3A-rebase)* 
 
-1. Got to this [link]() and accept the assignment. 
-2. Add the new remote and push
-3. Remove previous merge with reset
-4. Rebase branch to master. 
-5. Merge
-6. Rebase interactive, Squash, commit, delete, edit
-
-----
-
-This is what we did
-
-[rebasing-assignemnt](assets/img/)
-
+Note: 
+* Show interactive way of rebase
 ---
 
 ## Rebase vs Merge
@@ -533,33 +510,48 @@ This is what we did
 * Rebase creates a cleaner history
 * Whatever you choose, be consistent as a team
 
+Note:
+* Go to a project, where merge is the default, and check number of merges compared to total count of commits.
+`git rev-list --all --merges --count` and `git rev-list --all --count`
 ---
 
 ## Workflows
 
+* Master only
 * Feature branching
 * Succesful git workflow
-* Github workflow
+* Github workflow / Forking workflow
+
+Note: 
+* [github flow](https://guides.github.com/introduction/flow/)
 
 ----
 
+### Master only
+
+![master-only](https://www.endpoint.com/blog/2014/05/02/git-workflows-that-work/image-3.jpeg)
+
 ### Feature Branching
 
-![]()
+![feature-branching](https://wac-cdn.atlassian.com/dam/jcr:09308632-38a3-4637-bba2-af2110629d56/07.svg?cdnVersion=kl)
 
-[More info...](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
-
+Note: 
+* [Atlassian explanation](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+* github uses feature branch. [More info](http://scottchacon.com/2011/08/31/github-flow.html)
 ----
 
 ### Successfull git workflow
 
+![gitflow](https://nvie.com/img/git-model@2x.png)
+
+Note: 
 [More info](https://nvie.com/posts/a-successful-git-branching-model/)
 
 ---- 
 
 ### Github workflow
 
-[More info...](https://guides.github.com/introduction/flow/)
+[Click me](https://guides.github.com/introduction/flow/)
 
 --- 
 
