@@ -111,7 +111,6 @@ var times = SunCalc.times = [
 // adds a custom time to the times config
 
 SunCalc.addTime = function (angle, riseName, setName) {
-    console.log(angle);
     times.push([angle, riseName, setName]);
 };
 
@@ -192,7 +191,6 @@ function moonCoords(d) { // geocentric ecliptic coordinates of the moon
         dec: declination(l, b),
         dist: dt
     };
-    console.log('Print moon coordinates', coords);
     return coords;
 }
 

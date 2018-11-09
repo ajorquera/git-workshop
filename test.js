@@ -81,14 +81,6 @@ t.test('there is no console.logs', function (t) {
     t.end();
 });
 
-t.test('the commit message is the expected', function (t) {
-    const message = execSync('git log --format=%B -n 1 HEAD').toString().trim();
-
-    t.equal(message, 'Added my super cool test jajeejeajaja');
-
-    t.end();
-});
-
 t.skip('getTimes day detection works with a variety of date times', function (t) {
     var latitude = 47.606209;
     var longitude = -122.332069;
@@ -106,4 +98,26 @@ t.skip('getTimes day detection works with a variety of date times', function (t)
     }
 
     t.end();
+});
+
+t.test('should test that rebase exist', (t) => {
+    const commit = execSync('git log HEAD~1', {encoding: 'utf8'}).trim();
+
+    const areMessgAvailable = (
+        commit.includes('Added my super cool test jajeejeajaja') &&
+        commit.includes('Check coordinates') &&
+        commit.includes('Added tests')
+    );
+
+    t.equal(areMessgAvailable, true);
+});
+
+t.test('should test that rebase exist', (t) => {
+    t.equal();
+});
+t.test('should test that rebase exist', (t) => {
+    t.equal();
+});
+t.test('should test that rebase exist', (t) => {
+    t.equal();
 });
