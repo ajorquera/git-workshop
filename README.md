@@ -1,5 +1,3 @@
-# git-basics
-
 ![git-logo](https://github.com/ajorquera/git-workshop/blob/master/assets/imgs/git-logo-2.png)
 
 >Basic classes for git. 
