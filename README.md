@@ -1,10 +1,12 @@
 # git-basics
 
-Basic classes for git. We use [github classroom](https://classroom.github.com/) to make the class more interactive.
+![git-logo](https://github.com/ajorquera/git-workshop/blob/master/assets/imgs/git-logo-2.png)
+
+>Basic classes for git. 
 
 ## Presentation
 
-Checkout our presentation on this [link](https://gitpitch.com/github-basics/workshop/master)
+Checkout our presentation on this [link](https://gitpitch.com/ajorquera/git-workshop/master)
 
 ## Local
 
@@ -25,12 +27,13 @@ npm start
 
 #### Second part
 
+* The three trees
+* Reset
+* Checkout
+* Stash
 * Rebase
-* Rebase vs Merge
-* Git Workflows
-* Useful Commands
-* Standards
-* More Documentation
+* Workflows
+* Useful commands
 
 ## Assignments
-Check our assignment on the [wiki page](wiki/assignments)
+Check out the assignments on our [wiki page](https://github.com/ajorquera/git-workshop/wiki/assignments)
