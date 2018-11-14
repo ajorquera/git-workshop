@@ -531,6 +531,8 @@ Note:
 
 ![master-only](https://www.endpoint.com/blog/2014/05/02/git-workflows-that-work/image-3.jpeg)
 
+----
+
 ### Feature Branching
 
 ![feature-branching](https://wac-cdn.atlassian.com/dam/jcr:09308632-38a3-4637-bba2-af2110629d56/07.svg?cdnVersion=kl)
@@ -538,11 +540,12 @@ Note:
 Note: 
 * [Atlassian explanation](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
 * github uses feature branch. [More info](http://scottchacon.com/2011/08/31/github-flow.html)
+
 ----
 
 ### Successfull git workflow
 
-![gitflow](https://nvie.com/img/git-model@2x.png)
+![gitflow](assets/imgs/succesful-git-workflow.png)
 
 Note: 
 [More info](https://nvie.com/posts/a-successful-git-branching-model/)
@@ -556,13 +559,15 @@ Note:
 --- 
 
 ## Useful commands
-* Git alias. Check out this [link](https://gist.github.com/robmiller/6018582)
+* Git alias. [Examples](https://gist.github.com/robmiller/6018582)
 * Git gc
 * Git blame or github blame
 * Git log, shortlog
 
 Note:
 Show some examples in the terminal
+
+--- 
 
 ## Documentation
 * Pro Git (Digital version is free on amazon)
