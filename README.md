@@ -39,3 +39,7 @@ npm start
 Check out the assignments on our [wiki page](https://github.com/ajorquera/git-workshop/wiki/assignments)
 
 ## BEAAAAAAAAAAAAAAAA ES ADALABERRRR
+
+# Hola soy Kath
+
+_Me gusta la montaña_
