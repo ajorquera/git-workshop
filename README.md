@@ -43,3 +43,4 @@ Check out the assignments on our [wiki page](https://github.com/ajorquera/git-wo
 # Hola soy Kath
 
 _Me gusta la montaña_
+Maria estuvo aquí!
