@@ -1,6 +1,6 @@
 ![git-logo](https://github.com/ajorquera/git-workshop/blob/master/assets/imgs/git-logo-2.png)
 
->Basic classes for git. 
+> Basic classes for git.
 
 ## Presentation
 
@@ -16,22 +16,26 @@ npm start
 ```
 
 ## Contents
-* What is GIT?
-* Commit and branching
-* Remotes
-* Tagging
-* Visualizing GIT
-* Core
+
+- What is GIT?
+- Commit and branching
+- Remotes
+- Tagging
+- Visualizing GIT
+- Core
 
 #### Second part
 
-* The three trees
-* Reset
-* Checkout
-* Stash
-* Rebase
-* Workflows
-* Useful commands
+- The three trees
+- Reset
+- Checkout
+- Stash
+- Rebase
+- Workflows
+- Useful commands
 
 ## Assignments
+
 Check out the assignments on our [wiki page](https://github.com/ajorquera/git-workshop/wiki/assignments)
+
+## BEAAAAAAAAAAAAAAAA ES ADALABERRRR
