@@ -351,7 +351,28 @@ We should have something like:
 ...
 ```
 
+---
+
+## Part 2
+
+---
+
 ## Core Basics
+
+----
+
+### Merge Strategies
+
+Fast forward
+
+![fast-forward](assets/imgs/fast-forward.png)
+
+Recursive strategy
+
+![recursive-strategy](assets/imgs/recursive-strategy.png)
+
+Note:
+* https://learngitbranching.js.org/
 
 ----
 
@@ -365,23 +386,6 @@ But, how about we go deeper...
 
 Note:
 Talk about the meaning of snapshots. 
-
-----
-
-#### Database - commit, tree, tag and blob
-
-![git object types](assets/imgs/object-types.png)
-
-----
-
-### References 
-
-Branches, HEAD, tags, remotes
-
-![git references](assets/imgs/refs.png)
-
- Note: 
- * Explain HEAD => branch => commit
 
 ----
 
@@ -399,9 +403,27 @@ shasum README.md
 da39a3ee5e6b4b0d3255bfef95601890afd80709 README.md
 ```
 
----
+----
 
-## Part 2
+### References 
+
+Branches, HEAD, tags, remotes
+
+![git references](assets/imgs/refs.png)
+
+ Note: 
+ * Explain HEAD => branch => commit
+
+----
+
+#### Database - commit, tree, tag and blob
+
+![git object types](assets/imgs/object-types.png)
+
+Note: 
+* tag objects
+* a commit has a reference to a parent unless is the initial commit
+* show in .git/objects dir
 
 ---
 
@@ -428,16 +450,21 @@ Note:
 * Reset --hard
 * Reset file
 
-1. Move branch pointer (--soft or skip if file)
-2. Modify HEAD three to look like index (--mixed)
-3. Modify working directory to look like index (--hard)
-
-*[Assignments](https://github.com/ajorquera/git-workshop/wiki/assignments%3A-reset)* 
-
 Note: 
-* hard is dangerous, destroys data 
+* hard is dangerous, destroys data
+* Watch out with changing history
 
 ----
+### Usability Examples
+
+* Someone force pushed a common branch
+* I want to see on my editor what changes are in a commit(s)
+* Squashing commits
+* Unstage files
+* Recycle a branch
+* [Assignments](https://github.com/ajorquera/git-workshop/wiki/assignments%3A-reset)
+
+---
 
 ## Git checkout
 
@@ -446,13 +473,19 @@ Note:
 * Checkout tags
 * Checkout files 
 
-*[Assignments](https://github.com/ajorquera/git-workshop/wiki/assignments%3A-checkout)* 
+----
+
+### Usability examples
+* Change branches
+* Go back in time
+* Restore files
+* Get file versions from other branches
+* [Assignments](https://github.com/ajorquera/git-workshop/wiki/assignments%3A-checkout)
 
 Note: 
 * Detached HEAD
 * What would happend if I commit in detached HEAD
 * Think of an interactive way of showing HEAD changing
-
 
 ----
 ### Travel in time
@@ -482,6 +515,7 @@ Note:
 
 ## Git stash
 * Simple
+* Stash utils (save, list, apply, clear)
 * Interactive `stash -p`
 * Creating branch
 
@@ -550,27 +584,48 @@ Note:
 Note: 
 [More info](https://nvie.com/posts/a-successful-git-branching-model/)
 
----- 
+
+----
 
 ### Github workflow
 
 [Click me](https://guides.github.com/introduction/flow/)
 
---- 
+
+---
 
 ## Useful commands
-* Git alias. [Examples](https://gist.github.com/robmiller/6018582)
-* Git gc
+* Git alias. [Examples](https://gist.github.com/ajorquera/24d037556ebf84c07c07f420eecc047b)
 * Git blame or github blame
-* Git log, shortlog
+* Git log (lg)
+* git reflog
 
 Note:
 Show some examples in the terminal
 
---- 
+----
+
+### Git alias
+* p, pf
+* new, publish
+* rh, r1, r2, r3
+* pick
+* amend
+
+----
+
+### Git log, reflog
+* Search 
+* Fancy stuff
+* Lost reference
+
+Note:
+* Somehitng
+
+---
 
 ## Documentation
 * Pro Git (Digital version is free on amazon)
 * Awesome list. [More info...](https://github.com/sindresorhus/awesome)
-* Git website
-* Youtube
+* [Git website](https://git-scm.com/)
+* [Youtube](https://www.youtube.com/results?search_query=learn+git)
