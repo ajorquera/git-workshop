@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/ajorquera/git-basics#readme",
   "dependencies": {
-    "reveal-md": "^2.0.6"
+    "reveal-md": "^5.4.0"
   }
 }
